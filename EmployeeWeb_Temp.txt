@@ -1,0 +1,16 @@
+Google Authentication
+
+Client ID-
+
+803869856837-144rti64u42cfi51d12ut3qjgi0gg5g1.apps.googleusercontent.com
+
+Client Secret-
+
+H_ax_mGyGJD8Lgvd2JFH8WUa
+
+
+
+To get External URL-
+
+http://localhost:51560/api/Account/ExternalLogins?returnUrl=%2F&generateState=true
+
