@@ -4,6 +4,7 @@
     <title></title>
     <meta charset="utf-8" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/GoogleAuthentication.js"></script>
 </head>
 <body style="padding-top:20px">
     <div class="col-md-10 col-md-offset-1">
@@ -72,16 +73,16 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-
-            $('#linkClose').click(function () {
-                $('#divError').hide('fade');
-            });
+            getAccessToken();
 
             $('#btnGoogleLogin').click(function () {
                 window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A51560%2Flogin.html&state=j-F8WhydB_ohZ8rvwwU95SjbG4nZawMod6OV1EpXnuU1";
             });
 
-
+            $('#linkClose').click(function () {
+                $('#divError').hide('fade');
+            });
+         
             $('#btnLogin').click(function () {
                 $.ajax({
                     // Post username, password & the grant type to /token
